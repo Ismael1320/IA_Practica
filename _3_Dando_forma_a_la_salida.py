@@ -9,9 +9,10 @@ print("  *   *")
 print("  *****")
 
 
-print("\n",end="----------menor catidad de print----------\n") #Genera un salto de linea yrl valor de salida sera una divicion para cada ejemplo
+print("\n",end="----------menor catidad de print----------\n") #Genera un salto de linea  el valor de salida sera una divicion para cada ejemplo
 print("\n     *\n", "   * *\n", "  *   *\n", " *     *\n", "***   ***\n", "  *   *",)
-print("   *   *\n", "  *****\n") #crean la misma flecha pero con menor cantidad de prints y utilizan saltos de linea para que se generen en sus respectivas lineas
+print("   *   *\n", "  *****\n")
+#crean la misma flecha pero con menor cantidad de prints y utilizan saltos de linea para que se generen en sus respectivas lineas
 
 
 
