@@ -1,0 +1,57 @@
+def es_año_bisiesto(año):#Define una función que determina si un año es bisiesto.
+   
+    if año % 4 != 0: #Si el año no es divisible entre 4, es bisiesto.
+       
+        return False #Regresa un false indicando que el año es común.
+    
+    elif año % 100 != 0: #Si el año es divisible entre 4 pero no entre 100, es bisiesto.
+        
+        return True #Regresa un true indicando que el año es bisiesto.
+   
+    elif año % 400 != 0: #Si el año es divisible entre 100 pero no entre 400, es bisiesto.
+       
+        return False #Regresa un false indicando que el año es común.
+    
+    else: #Si el año es divisible entre 400.
+        
+        return True #Regresa un true indicando que el año es bisiesto.
+
+def dias_en_el_mes(año,mes): #Define una función que devuelve la cantidadad de días de un mes en un año.
+    
+    if año < 1582 or mes < 1 or mes > 12: #Verifica si el año o mes están fuera del rango valido.
+        
+        return None #Devuelve non si los datos no son validos.
+    
+    days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] #Lista con los días de cada mes en un año normal.
+    
+    res  = days[mes - 1] #Obtiene los días del mes correspondiente (restando 1 por que los indices empiezan en 0).
+    
+    if mes == 2 and es_año_bisiesto(año): #Verifica si es febrero y el año es bisiesto.
+        
+        res = 29 #Si es febreo un año bisiesto, el mes tiene 29 dias.
+    
+    return res #Devuelve el número de días del mes.
+
+test_años = [1900, 2000, 2016, 1987] #Lista de años que se usaran para probar la función. 
+
+test_mes = [ 2, 2, 1, 11] #Lista de meses corresondientes a cada año de pruba.
+
+test_resultados = [28, 29, 31, 30] #Resultados esperados para cada combinación de año y mes.
+
+for i in range(len(test_años)): #Recorre la lista de datos de prueba usandosus índices.
+
+    yr = test_años[i] #Guarda el año actual que se esta evaluando.
+
+    mo = test_mes[i] #Obtiene el mes correspondiente.
+
+    print(yr,mo,"-> ",end="") #Impime el mes y el año que se estan evaluando.
+
+    result = dias_en_el_mes(yr, mo) #Llama a la función para obtener los días del mes.
+
+    if result == test_resultados[i]: #Compara el resultado obtenido con el esperado.
+
+        print("OK") #Si coincide la prueba es correcta.
+
+    else: #Si el resultdo no coincide.
+
+        print("Fallido") #Indica que la prueba falló.
