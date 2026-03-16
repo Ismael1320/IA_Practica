@@ -11,7 +11,7 @@ def mysplit(strng): #Función que separa las palabras de una cadena.
             palabra += caracter #Agrega el carácter a la palabra.
             
         else: #Si encuentra un espacio.
-            if palabra != "": #Siya se formó una palabra.
+            if palabra != "": #Si ya se formó una palabra.
                 palabras.append(palabra) #La guarda en la lista.
                 palabra = "" #Reinicia la palabra.
                 
