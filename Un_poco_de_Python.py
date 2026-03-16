@@ -1,3 +1,4 @@
+#Muestra el menú principal con información de Python.
 print("""
 +-------------------------------------------------------------------------+
 |Bienvenido a Python.                                                     |
@@ -7,7 +8,7 @@ print("""
 |                                                                         |
 |¿Te gustaria saber algo sobre Python?                                    |
 |                                                                         |
-|1. ¿De donde proviene la palabra Python                                  | 
+|1. ¿De donde proviene la palabra Python?                                  | 
 |2. ¿Quien lo creo?                                                       |
 |3. ¿Cuales son sus objetivos?                                            |
 |4. ¿Existe más de un Python?                                             |
@@ -17,14 +18,15 @@ print("""
 +-------------------------------------------------------------------------+
 """)
 
-while True:
+while True: #Bucle que mantiene el programa funcionando hasta que el usuario salga
     
+    #Pide al usuario que introdusca una opción
     opcion = input("""
 Introdusca el numero de la opcion que quiere ver.
 Si no recureda las opciones introdusca 6 para regresar al menu: 
 """)
 
-
+    #OPCIÓN 1: Origen del nombre Python.
     if opcion == "1":
         print("""
 +--------------------------------------------------------------------------+
@@ -43,7 +45,7 @@ Si no recureda las opciones introdusca 6 para regresar al menu:
           """)
         continue
         
-    
+    #OPCIÓN 2: Creador de Python. 
     if opcion == "2":
         print("""
 +-------------------------------------------------------------------------+
@@ -59,7 +61,8 @@ Si no recureda las opciones introdusca 6 para regresar al menu:
 +-------------------------------------------------------------------------+
           """)
         continue
-    
+
+    #OPCIÓN 3: Objetivos.   
     if opcion == "3":
         print("""
 +-------------------------------------------------------------------------+
@@ -78,7 +81,7 @@ Si no recureda las opciones introdusca 6 para regresar al menu:
           """)
         continue
     
-    
+    #OPCIÓN 4: Versiónes de Python.  
     if opcion == "4":
         print("""
 +---------------------------------------------------------------------------------+
@@ -99,6 +102,7 @@ Si no recureda las opciones introdusca 6 para regresar al menu:
           """)
         continue
 
+    #OPCIÓN 5: Usos de Python.
     if opcion == "5":
         print("""
 +---------------------------------------------------------------------------------+
@@ -116,6 +120,7 @@ Si no recureda las opciones introdusca 6 para regresar al menu:
           """)
         continue  
 
+    #OPCIÓN 6: Regresa al menú.
     if opcion == "6":
         print("""
 +-------------------------------------------------------------------------+
@@ -136,7 +141,8 @@ Si no recureda las opciones introdusca 6 para regresar al menu:
 +-------------------------------------------------------------------------+
 """)
         continue      
-  
+
+    #OPCIÓN 7: Salida y despedida del programa. 
     if opcion == "7":
         print("""
 +-------------------------------------------------------------------------+
@@ -148,7 +154,7 @@ Si no recureda las opciones introdusca 6 para regresar al menu:
         break
     
 
-    else:
-        print("Esa opcion no es valida.", end = " ")
+    else: #Si el usuario ingresa un valor incorrecto.
+        print("Esa opcion no es valida.", end = " ") #Aparecera este mensaje
         continue
 
